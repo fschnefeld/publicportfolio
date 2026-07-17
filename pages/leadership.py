@@ -1,6 +1,7 @@
 import streamlit as st
 
 from data_handling.content import Principle, TeamMember
+from pages.charts import render_team_donut
 
 
 def _principle_item(principle: Principle) -> str:
@@ -27,18 +28,21 @@ def _team_card(member: TeamMember) -> str:
 def render_leadership(principles: list[Principle], team: list[TeamMember]) -> None:
     principle_items = "".join(_principle_item(p) for p in principles)
     team_cards = "".join(_team_card(m) for m in team)
+    donut_chart = render_team_donut()
 
     st.markdown(f"""
-<section class="section-alt" id="leadership">
+<section class="section-alt animate-section" id="leadership">
   <p class="section-label">04 — Leadership</p>
   <h2 class="section-title">How I lead<br><em>teams.</em></h2>
 
   <div class="leadership-grid">
     <div>
       <p class="section-body">
-        I've grown from individual contributor to a lead responsible for a multi-disciplinary team
-        spanning data science, engineering, analytics, and ML infrastructure.
-        My approach is rooted in clarity, psychological safety, and holding a high bar — technically and professionally.
+        Started my career running my own business, then spent four years as a consultant
+        setting up modern data stacks for 40+ clients before joining a large Danish fashion group —
+        where I founded the Data Science discipline, set the strategy, and hired the team.
+        My approach centres on business translation, change management, and staying close enough
+        to the work to be a credible counterpart to the people I lead.
       </p>
       <ul class="principle-list">
         {principle_items}
@@ -46,7 +50,8 @@ def render_leadership(principles: list[Principle], team: list[TeamMember]) -> No
     </div>
     <div>
       <p class="section-label" style="margin-bottom:1.5rem;">Current Team Structure</p>
-      <div class="team-card-wrap">
+      {donut_chart}
+      <div class="team-card-wrap" style="margin-top:1.5rem;">
         {team_cards}
       </div>
     </div>

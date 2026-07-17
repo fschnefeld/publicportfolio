@@ -25,6 +25,13 @@ html, body, [data-testid="stApp"] {
     max-width: 100% !important;
 }
 
+/* ── Ensure Streamlit markdown wrappers don't clip content ── */
+[data-testid="stMarkdownContainer"],
+.stMarkdown {
+    width: 100% !important;
+    overflow: visible !important;
+}
+
 /* ── Section wrapper ── */
 .section {
     padding: 5rem 8vw;
@@ -497,6 +504,90 @@ html, body, [data-testid="stApp"] {
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
     color: rgba(232,230,223,0.25);
+}
+
+/* ── Scroll animations ── */
+.animate-section {
+    opacity: 1;
+    transform: none;
+}
+.animate-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Active nav indicator ── */
+.nav-links a.active {
+    color: #E8E6DF;
+    position: relative;
+}
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #7B9E87;
+}
+
+/* ── Stat card enhancements ── */
+.stat-card {
+    transition: border-color 0.25s, transform 0.2s;
+}
+.stat-card:hover {
+    border-color: rgba(123,158,135,0.3);
+    transform: translateY(-2px);
+}
+.stat-num {
+    font-size: 3.2rem;
+}
+
+/* ── Divider enhancement ── */
+.divider {
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+}
+
+/* ── Project row hover ── */
+.project-row:hover {
+    background: rgba(123,158,135,0.025);
+    padding-left: 0.5rem;
+    transition: background 0.2s, padding-left 0.2s;
+}
+.project-row:hover .project-impact {
+    border-color: rgba(123,158,135,0.5);
+    background: rgba(123,158,135,0.08);
+}
+
+/* ── Skill card left accent on hover ── */
+.skill-card:hover {
+    border-left-color: #7B9E87;
+    border-left-width: 2px;
+}
+
+/* ── Tag hover ── */
+.stag {
+    transition: background 0.15s, color 0.15s;
+}
+.stag:hover {
+    background: rgba(123,158,135,0.2);
+    color: #A8C5B5;
+}
+
+/* ── Inline SVG chart animations ── */
+@keyframes bar-draw {
+    from { stroke-dashoffset: 200; }
+    to   { stroke-dashoffset: 0; }
+}
+.chart-bar {
+    animation: bar-draw 1.1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes donut-arc-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.donut-arc {
+    animation: donut-arc-in 0.6s ease both;
 }
 """
 

@@ -19,7 +19,7 @@ def render_expertise(skills: list[Skill]) -> None:
     cards = "".join(_skill_card(s) for s in skills)
 
     st.markdown(f"""
-<section class="section-alt" id="expertise">
+<section class="section-alt animate-section" id="expertise">
   <p class="section-label">02 — Expertise</p>
   <h2 class="section-title">What I bring<br>to the <em>table.</em></h2>
   <div class="skills-grid">

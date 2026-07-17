@@ -3,7 +3,7 @@ import streamlit as st
 
 def render_hero() -> None:
     st.markdown("""
-<section class="hero" id="home">
+<section class="hero animate-section is-visible" id="home">
   <p class="hero-eyebrow">Analytics & Data Science Lead → Management</p>
   <h1 class="hero-title">Turning data<br>into <em>direction.</em></h1>
   <p class="hero-sub">

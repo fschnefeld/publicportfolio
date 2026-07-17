@@ -35,10 +35,10 @@ class TeamMember(TypedDict):
 
 
 STATS: list[Stat] = [
-    {"num": "8+", "label": "Years in analytics &amp; data science"},
-    {"num": "12", "label": "Direct &amp; indirect reports managed"},
+    {"num": "6", "label": "Years in analytics &amp; data"},
+    {"num": "40+", "label": "Client data stacks built"},
     {"num": "3", "label": "Production ML systems shipped"},
-    {"num": "32", "label": "Markets covered by live forecasting platform"},
+    {"num": "3", "label": "People hired &amp; developed"},
 ]
 
 SKILLS: list[Skill] = [
@@ -46,61 +46,67 @@ SKILLS: list[Skill] = [
         "icon": "◉",
         "title": "ML & Forecasting Systems",
         "body": (
-            "Designed and shipped production forecasting pipelines for 32 markets and 14 SKU families, "
-            "using multi-model cascades (Prophet, ARIMA, Croston, LightGBM) with automated champion selection "
-            "and continuous backtesting."
+            "Architected and shipped a production demand planning platform supplying predictions "
+            "for wholesale and online buyers at a multi-brand fashion group. "
+            "Full CI/CD modernisation built on Databricks and FastAPI, "
+            "with multi-model cascades and automated champion selection."
         ),
-        "tags": ["Prophet", "LightGBM", "EM", "ARIMA", "MLflow", "Backtesting"],
+        "tags": ["Python", "Databricks", "FastAPI", "LightGBM", "Prophet", "MLflow"],
     },
     {
         "icon": "◈",
         "title": "Data Platform Architecture",
         "body": (
-            "Own end-to-end data platform decisions: from source ingestion to BI-ready marts. "
-            "Deep experience structuring dbt projects, defining materialization strategies, "
-            "and designing Dagster asset graphs for daily production jobs."
+            "Own end-to-end data platform decisions from source ingestion to BI-ready marts. "
+            "Set up the Microsoft Fabric infrastructure at current company and designed "
+            "the Git-supported deployment workflows. Deep experience with dbt project structure, "
+            "Dagster asset graphs, and materialisation strategies for daily production jobs."
         ),
-        "tags": ["dbt", "Dagster", "Databricks", "Microsoft Fabric", "Delta Lake"],
+        "tags": ["dbt", "Dagster", "dltHub", "Databricks", "Microsoft Fabric", "Delta Lake"],
     },
     {
         "icon": "◇",
         "title": "Analytics Engineering",
         "body": (
-            "Built layered ABT model architectures powering both BI (Power BI) and data science consumers. "
-            "Comfortable writing and reviewing complex SQL — window functions, incremental models, "
-            "fan-out analysis, anomaly investigation."
+            "3–4 years hands-on with Power BI alongside deep SQL and dbt experience. "
+            "Built ABT model architectures serving both BI and data science consumers. "
+            "Designed Git-supported deployment workflows in Microsoft Fabric "
+            "and comfortable reviewing complex analytical SQL at scale."
         ),
-        "tags": ["SQL", "T-SQL / Synapse", "Power BI", "Incremental Models"],
+        "tags": ["SQL", "Power BI", "dbt", "Incremental models", "Microsoft Fabric"],
     },
     {
         "icon": "△",
         "title": "Infrastructure & DevOps",
         "body": (
-            "Led platform teams with skills in Kubernetes, Terraform, and cloud infrastructure. "
-            "Managed skills matrices, defined coverage requirements, and drove hiring decisions "
-            "to close critical single-points-of-failure."
+            "Hands-on with the full modern data infrastructure stack in production: "
+            "Kubernetes, Terraform, Azure, and container-based CI/CD pipelines. "
+            "Comfortable setting engineering standards and reviewing infrastructure "
+            "decisions across the stack."
         ),
-        "tags": ["Kubernetes", "Terraform", "Azure", "CI/CD"],
+        "tags": ["Kubernetes", "Terraform", "Azure", "CI/CD", "Docker"],
     },
     {
         "icon": "⬡",
-        "title": "Team Leadership & Growth",
+        "title": "Applied AI & LLM Systems",
         "body": (
-            "Built and structured multi-disciplinary data teams. Own the skills matrix, "
-            "quarterly capability reviews, onboarding, and individual growth plans. "
-            "Passionate about closing expertise gaps through deliberate hiring and learning paths."
+            "Set up an internal self-hosted LLM system — Ollama + Open WebUI including hardware — "
+            "approximately two years before this became a mainstream enterprise pattern. "
+            "Runs point on agentic workflows for large organisations and introduced "
+            "spec-driven agentic development into the team's workflow."
         ),
-        "tags": ["People Management", "Hiring", "Skills Frameworks", "1:1s"],
+        "tags": ["Ollama", "Open WebUI", "Agentic workflows", "Local LLM", "Spec-driven dev"],
     },
     {
         "icon": "◻",
-        "title": "Technical Strategy & Documentation",
+        "title": "Stakeholder & Change Management",
         "body": (
-            "Author Architecture Decision Records, user stories, and system documentation "
-            "that align engineering decisions with business goals. Strong communicator "
-            "across technical and non-technical stakeholders."
+            "Developed over four years as a consultant working with 40+ clients — "
+            "scoping and delivering modern data stack solutions while managing "
+            "stakeholders resistant to change. "
+            "Comfortable leading decisions where people feel they have something to lose."
         ),
-        "tags": ["ADRs", "Roadmapping", "Stakeholder Comms", "OKRs"],
+        "tags": ["Stakeholder management", "Change management", "Consulting", "Scoping"],
     },
 ]
 
@@ -109,100 +115,83 @@ PROJECTS: list[Project] = [
         "num": "01",
         "title": "Demand Planning Forecasting Platform",
         "body": (
-            "Architected and delivered a production multi-model forecasting system covering 32 markets "
-            "and 14 SKU families. The pipeline runs a model cascade (Prophet → ETS → ARIMA → Croston) "
-            "per platform/brand combination, with automated champion selection via cross-validation "
-            "and continuous backtesting against actuals. Integrated a variant-aware feature store "
-            "resolving style, platform, and seasonality signals at prediction time."
+            "Architected and delivered a production ML forecasting platform supplying predictions "
+            "for buyers across online and wholesale purchasing at a multi-brand Danish fashion group. "
+            "Led a full CI/CD modernisation — moving to Databricks and FastAPI — "
+            "replacing ad hoc models with an automated, auditable pipeline buyers use daily."
         ),
-        "pills": ["Prophet", "LightGBM", "MLflow", "Dagster", "dbt", "Databricks"],
-        "impact": "↑ Forecast accuracy across 32 markets · Multi-model champion selection in production",
-        "year": "2025–2026",
+        "pills": ["Python", "Databricks", "FastAPI", "dbt", "CI/CD", "MLflow"],
+        "impact": "Buyer-facing ML predictions in daily use · full pipeline modernisation",
+        "year": "2024–2025",
     },
     {
         "num": "02",
-        "title": "ABT Data Architecture Restructure",
+        "title": "Store Replenishment Forecasting",
         "body": (
-            "Led the redesign of the core analytics base table (ABT) layer supporting both BI "
-            "and data science consumers. Consolidated business logic into a single abt_salesonline "
-            "model, introduced separate folder structures for YODA-bound and data science models, "
-            "de-scoped the demand planning job to only run actuals-producing models, "
-            "and reduced duplication across daily/weekly/monthly aggregations."
+            "Built a 10-day-ahead replenishment forecasting model for physical retail stores, "
+            "using XGBoost alongside classical time-series techniques to predict store-level "
+            "demand — giving replenishment planners a reliable, automated signal for stock "
+            "allocation instead of manual, rule-based reordering."
         ),
-        "pills": ["dbt", "Dagster", "Microsoft Fabric", "Power BI", "SQL"],
-        "impact": "Eliminated logic duplication · Aligned BI and Data Science data contracts",
-        "year": "2026",
+        "pills": ["Python", "XGBoost", "Time Series", "Forecasting"],
+        "impact": "10-day-ahead store-level forecasts · automated replenishment signal",
+        "year": "2023",
     },
     {
         "num": "03",
-        "title": "Team Skills Repository & Capability Framework",
+        "title": "Internal LLM Infrastructure",
         "body": (
-            "Designed and implemented a structured skills repository covering 7 core technologies "
-            "across a 14-person team (beginner / mid / expert). Used to identify single-points-of-failure "
-            "(Terraform, Kubernetes concentrated in 1–2 people), inform hiring prioritisation, "
-            "and build individual learning paths. Updated quarterly."
+            "Set up a self-hosted internal LLM system — Ollama + Open WebUI, including hardware "
+            "sourcing and configuration — approximately two years before this became a mainstream "
+            "enterprise pattern. Gave the organisation a private inference capability "
+            "and laid the technical groundwork for the agentic workflows adopted later."
         ),
-        "pills": ["People Leadership", "Skills Assessment", "Hiring Strategy", "Documentation"],
-        "impact": "Surfaced 3 critical coverage gaps · Drove 2 targeted hires",
-        "year": "2025",
-    },
-    {
-        "num": "04",
-        "title": "Cold-Start Forecasting with Expectation Maximization",
-        "body": (
-            "Explored and prototyped EM-based matrix factorisation to solve the cold-start problem "
-            "for new styles and low-volume platform/brand combinations. The approach leverages "
-            "shared latent factors (brand affinity, platform effect, seasonality) estimated from "
-            "rich data to make principled predictions for sparse series — avoiding the instability "
-            "of Prophet on insufficient data."
-        ),
-        "pills": ["Expectation Maximization", "Matrix Factorisation", "Python", "Sparse Demand"],
-        "impact": "Extended forecast coverage to new style launches",
-        "year": "2025",
+        "pills": ["Ollama", "Open WebUI", "Local LLM", "Infrastructure"],
+        "impact": "Private LLM capability ~2 years ahead of mainstream · foundation for later agentic work",
+        "year": "2022–2023",
     },
 ]
 
 PRINCIPLES: list[Principle] = [
     {
         "num": "01",
-        "title": "Systems over heroics",
+        "title": "Translate data into decisions",
         "body": (
-            "I build processes — ADRs, skills matrices, documentation, deployment standards — "
-            "so the team isn't dependent on any one person, including me."
+            "The job of an analytics leader is to make data legible to the business. "
+            "Every initiative should connect to a decision someone needs to make — "
+            "not a metric someone is vaguely interested in."
         ),
     },
     {
         "num": "02",
-        "title": "Technical credibility earns trust",
+        "title": "Change management is the hard part",
         "body": (
-            "I stay close to the craft. I review code, challenge architectural decisions, "
-            "and pair on hard problems. People follow leaders who understand the work."
+            "Technical implementation is rarely the blocker. Getting people to trust new systems "
+            "and actually change behaviour is. Stakeholder resistance is a signal — "
+            "it usually means someone feels they have something to lose."
         ),
     },
     {
         "num": "03",
-        "title": "Clarity before consensus",
+        "title": "Build the discipline, not just the project",
         "body": (
-            "I'd rather write a clear ADR that people disagree with than run an ambiguous "
-            "discussion that ends without a decision. Alignment comes after clarity, not before."
+            "Projects end; disciplines compound. Investing in clear standards, deliberate hiring, "
+            "and a coherent strategy creates value that outlasts any single deliverable."
         ),
     },
     {
         "num": "04",
-        "title": "Grow the team's ceiling, not just output",
+        "title": "Stay close to the work",
         "body": (
-            "Career development is a first-class responsibility. I invest time in skill frameworks, "
-            "deliberate stretch assignments, and making growth visible in the organisation."
+            "Even in a leadership role, I maintain enough technical depth to challenge engineering "
+            "decisions, review code, and be a credible counterpart to senior ICs. "
+            "Technical credibility is earned, not assumed."
         ),
     },
 ]
 
 TEAM: list[TeamMember] = [
-    {"role": "Lead Data Scientist — Forecasting", "badge_class": "badge-ds", "badge_label": "DATA SCIENCE"},
-    {"role": "ML Engineer — Pipelines", "badge_class": "badge-ds", "badge_label": "DATA SCIENCE"},
-    {"role": "Data Platform Lead", "badge_class": "badge-eng", "badge_label": "ENGINEERING"},
-    {"role": "Senior Data Engineer × 2", "badge_class": "badge-eng", "badge_label": "ENGINEERING"},
-    {"role": "Data Engineer × 4", "badge_class": "badge-eng", "badge_label": "ENGINEERING"},
-    {"role": "Analytics Engineer × 3", "badge_class": "badge-analytics", "badge_label": "ANALYTICS"},
-    {"role": "Data Analyst × 3", "badge_class": "badge-analytics", "badge_label": "ANALYTICS"},
+    {"role": "Data Science", "badge_class": "badge-ds", "badge_label": "DIRECT REPORT"},
+    {"role": "Data Delivery", "badge_class": "badge-ds", "badge_label": "DIRECT REPORT"},
+    {"role": "Analytics Engineer × 2", "badge_class": "badge-analytics", "badge_label": "SOFT REMIT"},
 ]

@@ -1,19 +1,27 @@
 import streamlit as st
 
 from data_handling.content import Stat
+from pages.charts import render_model_cascade_chart
+
+
+def _stat_card(s: Stat) -> str:
+    num = s["num"]
+    suffix = "+" if "+" in num else ""
+    target = num.replace("+", "")
+    return (
+        f'<div class="stat-card">'
+        f'<div class="stat-num" data-target="{target}" data-suffix="{suffix}">{num}</div>'
+        f'<div class="stat-label">{s["label"]}</div>'
+        f"</div>"
+    )
 
 
 def render_about(stats: list[Stat]) -> None:
-    stat_cards = "".join(
-        f'<div class="stat-card">'
-        f'<div class="stat-num">{s["num"]}</div>'
-        f'<div class="stat-label">{s["label"]}</div>'
-        f"</div>"
-        for s in stats
-    )
+    stat_cards = "".join(_stat_card(s) for s in stats)
+    cascade_chart = render_model_cascade_chart()
 
     st.markdown(f"""
-<section class="section" id="about">
+<section class="section animate-section" id="about">
   <p class="section-label">01 — About</p>
   <h2 class="section-title">Technical depth.<br><em>Strategic breadth.</em></h2>
   <div class="about-grid">
@@ -36,8 +44,11 @@ def render_about(stats: list[Stat]) -> None:
         OPEN TO MANAGEMENT OPPORTUNITIES
       </div>
     </div>
-    <div class="about-stat-grid">
-      {stat_cards}
+    <div>
+      <div class="about-stat-grid">
+        {stat_cards}
+      </div>
+      {cascade_chart}
     </div>
   </div>
 </section>

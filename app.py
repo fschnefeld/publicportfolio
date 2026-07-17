@@ -1,7 +1,18 @@
 import streamlit as st
 
 from data_handling.content import PRINCIPLES, PROJECTS, SKILLS, STATS, TEAM
-from pages import about, contact, expertise, footer, hero, leadership, nav, philosophy, projects
+from pages import (
+    about,
+    contact,
+    expertise,
+    footer,
+    hero,
+    leadership,
+    nav,
+    philosophy,
+    projects,
+    scripts,
+)
 from theme.theme import inject_css
 
 st.set_page_config(
@@ -21,3 +32,4 @@ philosophy.render_philosophy()
 leadership.render_leadership(PRINCIPLES, TEAM)
 contact.render_contact()
 footer.render_footer()
+scripts.render_scripts()

@@ -23,7 +23,7 @@ def render_projects(projects: list[Project]) -> None:
     rows = "".join(_project_row(p) for p in projects)
 
     st.markdown(f"""
-<section class="section" id="projects">
+<section class="section animate-section" id="projects">
   <p class="section-label">03 — Selected Work</p>
   <h2 class="section-title">Projects that<br><em>shipped.</em></h2>
   <div class="projects-list">

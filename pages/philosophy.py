@@ -3,7 +3,7 @@ import streamlit as st
 
 def render_philosophy() -> None:
     st.markdown("""
-<section class="philosophy-strip">
+<section class="philosophy-strip animate-section">
   <p class="philosophy-quote">
     "The job of a data leader isn't to have all the answers —
     it's to build a team that asks better questions."

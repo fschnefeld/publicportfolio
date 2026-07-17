@@ -3,7 +3,7 @@ import streamlit as st
 
 def render_contact() -> None:
     st.markdown("""
-<section class="section" id="contact">
+<section class="section animate-section" id="contact">
   <p class="section-label">05 — Contact</p>
   <h2 class="section-title">Let's talk about<br><em>what's next.</em></h2>
 
