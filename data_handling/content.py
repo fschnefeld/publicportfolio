@@ -115,8 +115,9 @@ PROJECTS: list[Project] = [
         "num": "01",
         "title": "Demand Planning Forecasting Platform",
         "body": (
-            "Architected and delivered a production ML forecasting platform supplying predictions "
-            "for buyers across online and wholesale purchasing at a multi-brand Danish fashion group. "
+            "Architected and delivered a production ML forecasting platform supplying "
+            "predictions for buyers across online and wholesale purchasing at a "
+            "multi-brand Danish fashion group. "
             "Led a full CI/CD modernisation — moving to Databricks and FastAPI — "
             "replacing ad hoc models with an automated, auditable pipeline buyers use daily."
         ),
@@ -147,7 +148,10 @@ PROJECTS: list[Project] = [
             "and laid the technical groundwork for the agentic workflows adopted later."
         ),
         "pills": ["Ollama", "Open WebUI", "Local LLM", "Infrastructure"],
-        "impact": "Private LLM capability ~2 years ahead of mainstream · foundation for later agentic work",
+        "impact": (
+            "Private LLM capability ~2 years ahead of mainstream · "
+            "foundation for later agentic work"
+        ),
         "year": "2022–2023",
     },
 ]
@@ -193,5 +197,9 @@ PRINCIPLES: list[Principle] = [
 TEAM: list[TeamMember] = [
     {"role": "Data Science", "badge_class": "badge-ds", "badge_label": "DIRECT REPORT"},
     {"role": "Data Delivery", "badge_class": "badge-ds", "badge_label": "DIRECT REPORT"},
-    {"role": "Analytics Engineer × 2", "badge_class": "badge-analytics", "badge_label": "SOFT REMIT"},
+    {
+        "role": "Analytics Engineer × 2",
+        "badge_class": "badge-analytics",
+        "badge_label": "SOFT REMIT",
+    },
 ]

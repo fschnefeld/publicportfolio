@@ -7,8 +7,9 @@ def render_hero() -> None:
   <p class="hero-eyebrow">Analytics & Data Science Lead → Management</p>
   <h1 class="hero-title">Turning data<br>into <em>direction.</em></h1>
   <p class="hero-sub">
-    I build and lead high-performing data teams that translate complex analytical systems into strategic business outcomes.
-    Currently exploring my next step into a Head of Data / Director of Analytics role.
+    I build and lead high-performing data teams that translate complex analytical
+    systems into strategic business outcomes. Currently exploring my next step into
+    a Head of Data / Director of Analytics role.
   </p>
   <div class="hero-pills">
     <span class="pill">Demand Forecasting</span>

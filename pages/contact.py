@@ -10,8 +10,9 @@ def render_contact() -> None:
   <div class="contact-grid">
     <div>
       <p class="section-body">
-        I'm selectively exploring Head of Data, Director of Analytics, and VP of Data roles
-        — ideally in a product-led company where data is a genuine strategic asset, not an afterthought.
+        I'm selectively exploring Head of Data, Director of Analytics, and VP of Data
+        roles — ideally in a product-led company where data is a genuine strategic
+        asset, not an afterthought.
       </p>
       <p class="section-body" style="margin-top:1rem;">
         I'm especially interested in orgs that are scaling their data platform,
