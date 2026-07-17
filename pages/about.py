@@ -20,7 +20,8 @@ def render_about(stats: list[Stat]) -> None:
     stat_cards = "".join(_stat_card(s) for s in stats)
     cascade_chart = render_model_cascade_chart()
 
-    st.markdown(f"""
+    st.markdown(
+        f"""
 <section class="section animate-section" id="about">
   <p class="section-label">01 — About</p>
   <h2 class="section-title">Technical depth.<br><em>Strategic breadth.</em></h2>
@@ -56,4 +57,6 @@ def render_about(stats: list[Stat]) -> None:
   </div>
 </section>
 <div class="divider"></div>
-""", unsafe_allow_html=True)
+""",
+        unsafe_allow_html=True,
+    )

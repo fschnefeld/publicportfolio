@@ -2,7 +2,8 @@ import streamlit as st
 
 
 def render_hero() -> None:
-    st.markdown("""
+    st.markdown(
+        """
 <section class="hero animate-section is-visible" id="home">
   <p class="hero-eyebrow">Analytics & Data Science Lead → Management</p>
   <h1 class="hero-title">Turning data<br>into <em>direction.</em></h1>
@@ -22,4 +23,6 @@ def render_hero() -> None:
   <a class="hero-cta" href="#contact">Open to opportunities</a>
 </section>
 <div class="divider"></div>
-""", unsafe_allow_html=True)
+""",
+        unsafe_allow_html=True,
+    )

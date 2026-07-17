@@ -41,8 +41,8 @@ def render_model_cascade_chart() -> str:
 
     return (
         f'<div style="margin-top:2.5rem;">'
-        f'<p style="font-family:\'DM Mono\',monospace;font-size:0.68rem;'
-        f'letter-spacing:0.18em;color:#7B9E87;text-transform:uppercase;'
+        f"<p style=\"font-family:'DM Mono',monospace;font-size:0.68rem;"
+        f"letter-spacing:0.18em;color:#7B9E87;text-transform:uppercase;"
         f'margin-bottom:1.25rem;">Model cascade · champion selection rate</p>'
         f'<svg viewBox="0 0 {total_w} {total_h}" '
         f'width="100%" style="max-width:{total_w}px;overflow:visible;">'
@@ -82,7 +82,7 @@ def render_team_donut() -> str:
         f'<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">'
         f'<span style="width:8px;height:8px;border-radius:50%;background:{color};'
         f'flex-shrink:0;"></span>'
-        f'<span style="font-family:\'DM Mono\',monospace;font-size:0.72rem;'
+        f"<span style=\"font-family:'DM Mono',monospace;font-size:0.72rem;"
         f'color:rgba(232,230,223,0.55);">{name} · {count}</span>'
         f"</div>"
         for name, count, color in segments
@@ -93,13 +93,9 @@ def render_team_donut() -> str:
         f'<svg viewBox="0 0 108 108" width="108" height="108" '
         f'style="transform:rotate(-90deg);flex-shrink:0;">'
         f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" '
-        f'stroke="rgba(255,255,255,0.06)" stroke-width="{stroke_w}" />'
-        + "".join(arcs)
-        + '</svg>'
-        '<div>'
-        '<p style="font-family:\'DM Mono\',monospace;font-size:0.68rem;'
-        'letter-spacing:0.18em;color:#7B9E87;text-transform:uppercase;'
-        'margin-bottom:0.9rem;">My team · 4 in scope</p>'
-        + legend_items
-        + "</div></div>"
+        f'stroke="rgba(255,255,255,0.06)" stroke-width="{stroke_w}" />' + "".join(arcs) + "</svg>"
+        "<div>"
+        "<p style=\"font-family:'DM Mono',monospace;font-size:0.68rem;"
+        "letter-spacing:0.18em;color:#7B9E87;text-transform:uppercase;"
+        'margin-bottom:0.9rem;">My team · 4 in scope</p>' + legend_items + "</div></div>"
     )

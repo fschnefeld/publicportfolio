@@ -2,7 +2,8 @@ import streamlit as st
 
 
 def render_nav() -> None:
-    st.markdown("""
+    st.markdown(
+        """
 <nav class="nav">
   <span class="nav-logo">◈ Portfolio</span>
   <ul class="nav-links">
@@ -13,4 +14,6 @@ def render_nav() -> None:
     <li><a href="#contact" data-section="contact">Contact</a></li>
   </ul>
 </nav>
-""", unsafe_allow_html=True)
+""",
+        unsafe_allow_html=True,
+    )

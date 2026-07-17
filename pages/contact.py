@@ -2,7 +2,8 @@ import streamlit as st
 
 
 def render_contact() -> None:
-    st.markdown("""
+    st.markdown(
+        """
 <section class="section animate-section" id="contact">
   <p class="section-label">05 — Contact</p>
   <h2 class="section-title">Let's talk about<br><em>what's next.</em></h2>
@@ -45,4 +46,6 @@ def render_contact() -> None:
   </div>
 </section>
 <div class="divider"></div>
-""", unsafe_allow_html=True)
+""",
+        unsafe_allow_html=True,
+    )

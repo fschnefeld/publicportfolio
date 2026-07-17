@@ -2,7 +2,8 @@ import streamlit as st
 
 
 def render_philosophy() -> None:
-    st.markdown("""
+    st.markdown(
+        """
 <section class="philosophy-strip animate-section">
   <p class="philosophy-quote">
     "The job of a data leader isn't to have all the answers —
@@ -10,4 +11,6 @@ def render_philosophy() -> None:
   </p>
   <p class="philosophy-attr">Management Philosophy</p>
 </section>
-""", unsafe_allow_html=True)
+""",
+        unsafe_allow_html=True,
+    )

@@ -30,7 +30,8 @@ def render_leadership(principles: list[Principle], team: list[TeamMember]) -> No
     team_cards = "".join(_team_card(m) for m in team)
     donut_chart = render_team_donut()
 
-    st.markdown(f"""
+    st.markdown(
+        f"""
 <section class="section-alt animate-section" id="leadership">
   <p class="section-label">04 — Leadership</p>
   <h2 class="section-title">How I lead<br><em>teams.</em></h2>
@@ -58,4 +59,6 @@ def render_leadership(principles: list[Principle], team: list[TeamMember]) -> No
   </div>
 </section>
 <div class="divider"></div>
-""", unsafe_allow_html=True)
+""",
+        unsafe_allow_html=True,
+    )
